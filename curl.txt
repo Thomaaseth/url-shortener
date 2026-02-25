@@ -2,11 +2,11 @@ curl -X POST http://localhost:3000/url -H "Content-Type: application/json" -d '{
 curl -X POST http://localhost:3000/url -H "Content-Type: application/json" -d '{"url": "http://www.example.com"}'
 
 curl -X GET http://localhost:3000/url/shortened -H "Content-Type: application/json" -d '{"url": "http://ubzbhn.com"}'
-curl -X GET http://localhost:3000/url/shortened/ubzbhn
+curl -X GET http://localhost:3000/url/shortened/j4nn8e
 curl -X GET http://localhost:3000/url/shortened/abc123
-curl -X GET http://localhost:3000/url/shortened/ubzbhn/stats
+curl -X GET http://localhost:3000/url/shortened/j4nn8e/stats
 
-curl -X PUT http://localhost:3000/url/shortened/ubzbhn -H "Content-Type: application/json" -d '{"url": "http://www.hosting.com"}'
+curl -X PUT http://localhost:3000/url/shortened/j4nn8e -H "Content-Type: application/json" -d '{"url": "http://www.hosting.com"}'
 curl -X PUT http://localhost:3000/url/shortened/ubzbhn -H "Content-Type: application/json" -d '{"url": "http://www.test.com"}'
 
-curl -X DELETE http://localhost:3000/url/shortened/r06fsb
+curl -X DELETE http://localhost:3000/url/shortened/j4nn8e

@@ -22,16 +22,16 @@ export async function deleteShortCode(shortCode: string) {
     return result;
 }
 
-
 export async function getCount(shortCode: string) {
     const urlObject = await db.select().from(url).where(eq(url.shortCode, shortCode))
     return urlObject;
 }
 
-export async function checkUniqueShortCode(shortCode: string): Promise<boolean> {
-    const isUnique = await db.select().from(url).where(eq(url.shortCode, shortCode))
-    if (isUnique.length > 0) {
-        return false;
-    }
-    return true;
-}
+// Not necessary, enforced uniqueness at db level
+// export async function checkUniqueShortCode(shortCode: string): Promise<boolean> {
+//     const isUnique = await db.select().from(url).where(eq(url.shortCode, shortCode))
+//     if (isUnique.length > 0) {
+//         return false;
+//     }
+//     return true;
+// }
