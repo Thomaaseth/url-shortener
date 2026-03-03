@@ -1,6 +1,7 @@
 import express, { type Request, type Response } from 'express'
 import { updateCount, updateLongUrl, deleteShortCode, getCount } from '../repository/db.operations'
 import { isValidUrl, generateUniqueShortCode } from '../../src/services/url.services'
+import { url } from '../db/schema'
 
 
 const router = express.Router()
@@ -39,7 +40,8 @@ router.get('/shortened/:shortCode', async (req: Request, res: Response) => {
             res.status(404).json({ message: `The url doesn't exist`})
             return
         } else {
-            return res.status(200).json({ urlObject });
+            // res.status(200).json({ urlObject });
+            return res.redirect(urlObject[0]!.url)
         }
     } catch (error) {
         if (error instanceof Error) {
