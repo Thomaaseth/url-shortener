@@ -37,11 +37,11 @@ The frontend is served at `http://localhost:3000`.
 
 ## API Endpoints
 
-| POST | `/url` | Create a shortened URL |
-| GET  | `/url/shortened/:shortCode` | Retrieve original URL and redirect |
-| PUT  | `/url/shortened/:shortCode` | Update the original URL |
-| DELETE | `/url/shortened/:shortCode` | Delete a short URL |
-| GET  | `/url/shortened/:shortCode/stats` | Get access count stats |
+- POST | `/url` | Create a shortened URL |
+- GET  | `/url/shortened/:shortCode` | Retrieve original URL and redirect |
+- PUT  | `/url/shortened/:shortCode` | Update the original URL |
+- DELETE | `/url/shortened/:shortCode` | Delete a short URL |
+- GET  | `/url/shortened/:shortCode/stats` | Get access count stats |
 
 
 ## Project URL
